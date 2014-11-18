@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Angular Exercise 3</title>
+<script src="bower_components/angular/angular.js"></script>
+</head>
+<body ng-app="Demo">
+
+<div class="container" ng-controller="MainCtrl">
+	<input type="text" ng-model="search.name" placeholder="Filter by name">
+
+    <ul>
+        <li ng-repeat="item in shoppingList | filter:search">{{ item.quantity }} items with the name {{ item.name }} will cost {{ item.price | currency }}</li>
+    </ul>
+</div>
+
+<script src="js/app.js"></script>
+
+</body>
+</html>
